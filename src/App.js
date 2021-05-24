@@ -121,11 +121,10 @@ export default function App() {
         </WordBox>
         <Wrapper>
           <FloBox>
-            <span onDrop={handleDrop}>
-              {newBoxes.map((newBox) => (
-                <span>{newBox}</span>
-              ))}
-            </span>
+            <span
+              onDrop={handleDrop}
+              onDragOver={(event) => event.preventDefault()}
+            ></span>
             <span onDrop={handleDrop}>2</span>
             <span onDrop={handleDrop}>3</span>
             <span onDrop={handleDrop}>4</span>
